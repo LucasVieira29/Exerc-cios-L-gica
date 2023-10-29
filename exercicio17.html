@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    /*
+    Escrever um algoritmo que lê cinco números inteiros, um de cada vez, armazena os
+números lidos em um vetor e a partir da leitura do vetor imprime qual é o maior e o
+menor dos números lidos e também a soma dos números lidos.
+    */
+
+let numeros = [];
+let soma = 0;
+
+for (let i = 0; i < 5; i++) {
+    let numero = +prompt("Informe um número inteiro:");
+    numeros.push(numero);
+    soma += numero;
+}
+
+let maiorNumero = numeros[0];
+let menorNumero = numeros[0];
+
+for (let i = 1; i < numeros.length; i++) {
+    if (numeros[i] > maiorNumero) {
+        maiorNumero = numeros[i];
+    }
+    if (numeros[i] < menorNumero) {
+        menorNumero = numeros[i];
+    }
+}
+
+
+alert(`Maior número: ${maiorNumero}
+Menor número: ${menorNumero}
+Soma dos números: ${soma}`);
+
+
+</script>

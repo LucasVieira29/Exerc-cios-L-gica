@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    let nomeMaiorVinho = "";
+    let precoMaiorVinho = 0;
+    let tipoMaiorVinho = "";
+
+    let fim = false;
+
+    while(!fim) {
+        let nomeNovoVinho = prompt ("Insira o nome do vinho (ou fim para terminar)")
+        if (nomeNovoVinho === "fim") {
+            fim = true;
+            break;
+        }
+        let precoNovoVinho = +prompt ("Insira o preço do vinho")
+        let tipoNovoVinho = prompt ("Insira o tipo do vinho")
+
+        if (precoNovoVinho > precoMaiorVinho) {
+            nomeMaiorVinho = nomeNovoVinho
+            precoMaiorVinho = precoNovoVinho
+            tipoMaiorVinho = tipoNovoVinho
+        }
+    }
+
+    alert(`O vinho ${nomeMaiorVinho} é o mais caro, seu preço é: R$ ${precoMaiorVinho.toFixed(2).replace(".",",")}, e seu tipo é: ${tipoMaiorVinho}`)
+
+</script>
+
+
+

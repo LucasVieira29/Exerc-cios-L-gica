@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+/*
+Escrever um algoritmo que lê uma quantidade não informada de dados de pessoas
+que estão sendo monitoradas no posto de saúde. Para cada pessoa é anotada o sexo
+(M ou F) e a altura (em metros), que é fornecida via teclado, sendo que a altura igual
+a zero informa o final da leitura. Armazenar as informações em vetores e
+posteriormente, calcule e escreva:
+a. A maior altura informada,
+b. A média das alturas das mulheres,
+c. A quantidade de homens,
+d. A menor altura dos homens.
+*/
+
+let alturas = [];
+let sexos = [];
+let maiorAltura = 0;
+let somaAlturasMulheres = 0;
+let quantidadeMulheres = 0;
+let quantidadeHomens = 0;
+let menorAlturaHomens = Number.POSITIVE_INFINITY;
+
+while (true) {
+    let sexo = prompt("Informe o sexo (M ou F) da pessoa (0 para encerrar):");
+    if (sexo === '0') {
+        break;
+    }
+
+    let altura = parseFloat(prompt("Informe a altura (em metros) da pessoa:"));
+
+    sexos.push(sexo);
+    alturas.push(altura);
+
+    if (altura > maiorAltura) {
+        maiorAltura = altura;
+    }
+
+    if (sexo === 'F') {
+        somaAlturasMulheres += altura;
+        quantidadeMulheres++;
+    }
+
+    if (sexo === 'M') {
+        quantidadeHomens++;
+        if (altura < menorAlturaHomens) {
+            menorAlturaHomens = altura;
+        }
+    }
+}
+
+if (sexos.length > 0) {
+    let mediaAlturasMulheres = somaAlturasMulheres / quantidadeMulheres;
+
+    console.log(`Maior altura informada: ${maiorAltura} metros`);
+    console.log(`Média das alturas das mulheres: ${mediaAlturasMulheres.toFixed(2)} metros`);
+    console.log(`Quantidade de homens: ${quantidadeHomens}`);
+
+    if (quantidadeHomens > 0) {
+        console.log(`Menor altura dos homens: ${menorAlturaHomens.toFixed(2)} metros`);
+    } else {
+        console.log("Nenhum homem foi informado.");
+    }
+} else {
+    console.log("Nenhum dado foi informado.");
+}
+
+</script>

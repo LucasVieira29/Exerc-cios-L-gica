@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<script>
+
+/*
+Escreva um algoritmo que permita que o professor digite as notas da 1a. e 2a.
+avaliações de vários alunos, um aluno de cada vez. calcule e imprima a média
+(simples) desse aluno. Só devem ser aceitos valores válidos durante a leitura (0 a 10)
+para cada nota. Após apresentar a media calculada, o algoritmo deverá perguntar se
+o professor deseja continuar calculando a media para outros alunos. Se a resposta for
+‘SIM’, o algoritmo continua, caso contrário, o algoritmo finaliza.
+*/
+
+let continuar = true;
+
+while (continuar) {
+  let nota1 = +prompt("Digite a nota da 1ª avaliação (entre 0 e 10):");
+  let nota2 = +prompt("Digite a nota da 2ª avaliação (entre 0 e 10):");
+
+  if (nota1 >= 0 && nota1 <= 10 && nota2 >= 0 && nota2 <= 10) {
+    let media = (nota1 + nota2) / 2;
+    alert(`A média do aluno é: ${media.toFixed(2)}`);
+
+    let resposta = prompt("Deseja calcular a média para outro aluno? (SIM ou NÃO)").toUpperCase();
+    
+    if (resposta !== "SIM") {
+      continuar = false;
+      alert("O programa foi encerrado.");
+    }
+  } else {
+    alert("Por favor, digite notas válidas entre 0 e 10.");
+  }
+}
+</script>

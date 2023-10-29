@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+/*
+Escrever um algoritmo que lê uma quantidade informada inicialmente de notas de
+alunos da disciplina de Lógica. Para cada aluno são lidas quatro (4) notas variando de
+zero (0) a dez (10). Para ser aprovado o aluno necessita de média igual ou superior a
+seis (6). Ler as notas, calcular a média e armazenar em uma matriz (Vetor
+bidimensional). Considere o índice da linha da matriz como o número do aluno na
+chamada. Após o cálculo da média, ler os dados e escrever: “O Aluno y foi Aprovado
+(ou Reprovado) com média x,xx”. No final informar:
+a. quantos alunos foram aprovados,
+b. quantos alunos foram reprovados,
+c. qual a porcentagem de alunos aprovados.
+*/
+
+const quantidadeAlunos = +prompt("Informe a quantidade de alunos"); 
+const notasDosAlunos = [];
+
+let aprovados = 0;
+let reprovados = 0;
+
+for (let i = 0; i < quantidadeAlunos; i++) {
+    const notas = [];
+    let somaDasNotas = 0;
+
+    for (let j = 0; j < 4; j++) {
+        const nota = +prompt(`Informe a nota ${j + 1} do aluno ${i + 1}:`);
+        notas.push(nota);
+        somaDasNotas += nota;
+    }
+
+    const media = somaDasNotas / 4;
+    notasDosAlunos.push(notas);
+
+    if (media >= 6) {
+        aprovados++;
+        alert(`O Aluno ${i + 1} foi Aprovado com média ${media.toFixed(2)}`);
+    } else {
+        reprovados++;
+        alert(`O Aluno ${i + 1} foi Reprovado com média ${media.toFixed(2)}`);
+    }
+}
+
+
+const porcentagemAprovados = (aprovados / quantidadeAlunos) * 100;
+
+
+alert(`${aprovados} alunos foram aprovados.;
+${reprovados} alunos foram reprovados.;
+A porcentagem de alunos aprovados é ${porcentagemAprovados.toFixed(2)}%.`);
+
+
+
+
+</script>

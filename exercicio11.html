@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    let custoDeFabrica = +prompt("digite o custo de fabrica")
+    let distrubuidor = 0.28 * custoDeFabrica
+    let impostos = 0.45 * custoDeFabrica
+    let precoFinal = custoDeFabrica + distrubuidor + impostos
+
+    alert(`O preco final é de: R$${precoFinal.toFixed(2).replace(".",",")}`)
+    
+    
+</script>

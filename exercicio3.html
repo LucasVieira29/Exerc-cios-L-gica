@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+/*
+Escreva um algoritmo que leia duas notas do aluno (n1 e n2) e calcule a média
+aritmética. Exibir a situação do aluno (aprovado ou reprovado), sendo que o aluno
+somente é aprovado quando a média é maior ou igual a 6
+*/
+    let nota1 = +prompt("digite a primeira nota")
+    let nota2 = +prompt("digite a segunda nota")
+    let media = (nota1 + nota2)/2;
+
+    if (media >= 6) {
+        alert(`Aluno aprovado com média: ${media}`)
+    } else if (media < 6){
+        alert(`Aluno reprovado com média: ${media}`)
+    } else {
+        alert(`Não foi digitado um valor válido`)
+    }
+
+</script>

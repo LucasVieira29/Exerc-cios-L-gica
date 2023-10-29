@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+/*
+Em uma loja, a política de promoções consiste em dar um “desconto relâmpago” algum
+produto da loja. O valor durante a promoção é o menor valor entre:
+a. Preço anterior;
+b. Preço atual com desconto de 10%;
+c. Média do preço atual e do preço anterior com desconto de 10%.
+O preço atual é o preço praticado no momento e o preço anterior é o preço praticado
+antes do último reajuste. Exemplos:
+a. para um último preço praticado de R$ 10,00, preço atual de R$ 12,00, tem-se
+como opções R$ 10,00 (anterior), R$ 10,80 (atual com 10%) e R$ 9,90 (média
+com 10%), sendo o menor R$ 9,90;
+b. para preço anterior R$ 10,00 e preço atual R$ 14,00, as opções são R$ 10,00
+(anterior), R$ 12,60 (atual com 10%) e R$ 10,80 (média com 10%), sendo o
+menor R$ 10,00).
+Desenvolva um algoritmo que, a partir do preço anterior e do preço atual de um
+produto, escreva qual seu valor durante a promoção, dadas as regras acima. Assume
+que sempre os dados digitados serão corretos, isto é, todos os valores maiores que
+zero
+*/
+
+let anterior = +prompt("Digite o preço anterior");
+let atual =+prompt("Digite o valor atual");
+let atualComDesconto = atual*0.90
+let mediaComDesconto = ((atual + anterior)/2) * 0.90;
+
+if (atualComDesconto < anterior && atual < mediaComDesconto){
+    alert(`O valor do produto nessa promoção é de R$${atualComDesconto.toFixed(2).replace(".",",")}`)
+} else if (anterior < atualComDesconto && anterior < mediaComDesconto) {
+    alert(`O valor do produto nessa promoção é de R$${anterior.toFixed(2).replace(".",",")}`)
+} else if (mediaComDesconto < atualComDesconto && mediaComDesconto < anterior){
+    alert(`O valor do produto nessa promoção é de R$${mediaComDesconto.toFixed(2).replace(".",",")}`)
+} else {
+    alert("Não foi digitado um valor válido")
+}
+
+console.log(atualComDesconto)
+console.log(anterior)
+console.log(mediaComDesconto)
+</script>
+

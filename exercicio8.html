@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+/*
+A empresa de fornecimento de energia elétrica da sua cidade disponibilizou a tabela
+de consumo de energia elétrica em Kwh. Escreva um algoritmo para calcular a conta
+de energia elétrica de um estabelecimento, considerando a seguinte tabela de valores
+disponibilizada:
+*/
+
+const consumoKwh = +prompt("Digite o consumo em kWh: ");
+
+let precoPorKwh;
+
+if (consumoKwh <= 300) {
+    precoPorKwh = 1.25;
+} else if (consumoKwh <= 600) {
+    precoPorKwh = 1.50;
+} else if (consumoKwh <= 1000) {
+    precoPorKwh = 1.75;
+} else {
+    precoPorKwh = 2.00;
+}
+
+const valorConta = consumoKwh * precoPorKwh;
+
+alert(`A conta de energia elétrica é de R$ ${valorConta.toFixed(2).replace(".",",")}`);
+</script>

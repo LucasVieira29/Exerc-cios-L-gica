@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+/* Uma revendedora de carros usados paga a seus funcionários vendedores um salário
+fixo por mês, mais uma comissão também fixa para cada carro vendido e mais 5% do
+valor das vendas por ele efetuadas. Escrever um algoritmo que leia o número de carros
+por ele vendidos, o valor total de suas vendas, o salário fixo e o valor que ele recebe
+por carro vendido. Calcule e escreva o salário final do vendedor*/
+
+
+let numeroDeCarrosVendidos = +prompt("Digite o número de carros vendidos:");
+let valorTotalDasVendas = +prompt("Digite o valor total das vendas:");
+let salarioFixo = +prompt("Digite o salário fixo:");
+let valorPorCarroVendido = +prompt("Digite o valor por carro vendido:");
+let comissaoPorCarro = numeroDeCarrosVendidos * valorPorCarroVendido;
+let bonus = 0.05 * valorTotalDasVendas;
+let salarioFinal = salarioFixo + comissaoPorCarro + bonus;
+
+alert(`O salário final do vendedor é de R$ ${salarioFinal.toFixed(2)}`);
+
+</script>

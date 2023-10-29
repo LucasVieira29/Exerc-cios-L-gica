@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+/*
+Escrever um algoritmo que solicite ao usuário que informe o seu peso e a sua altura.
+O algoritmo deverá calcular e imprimir o Índice de Massa Corporal, cuja fórmula é
+IMC = peso / (altura2).
+*/
+    let peso = +prompt("Digite seu peso(kg)");
+    let altura = +prompt("Digite sua altura(metros)");
+    let imc = peso / (altura * altura);
+    imc = imc.toFixed(2)
+
+
+    alert(`Seu IMC é: ${imc}`);
+
+</script>70
